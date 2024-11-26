@@ -15,13 +15,13 @@ const LightTooltip = styled(({className, ...props}) => (
   },
 }));
 
-const StyledButton = styled(Button)(({theme, isActive}) => ({
-  backgroundColor: isActive ? theme.palette.secondary.main : '#ECEFF1',
+const StyledButton = styled(Button)(({theme, isactive}) => ({
+  backgroundColor: isactive ? theme.palette.secondary.main : '#ECEFF1',
   height: 40,
   width: 'auto',
   padding: '0 16px',
   '&:hover': {
-    backgroundColor: isActive
+    backgroundColor: isactive
       ? theme.palette.secondary.dark
       : theme.palette.action.hover,
     boxShadow: theme.shadows[3],
@@ -39,10 +39,10 @@ const renderButton = (
   handleSetSelectedItemToolbar,
   iconElement
 ) => {
-  const isActive = selectedItemToolbar[itemKey];
+  const isactive = selectedItemToolbar[itemKey];
 
   return (
-    <StyledButton size='small' isActive={isActive}>
+    <StyledButton size='small' isactive={isactive}>
       {iconElement}
     </StyledButton>
   );
